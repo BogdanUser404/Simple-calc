@@ -44,8 +44,10 @@ int main(int argc   , char *argv[]){
             result = sin(num1);
         case 'q':
             result = cbrt(num1);
+            break;
         case 'r':
             result = sqrt(num1);
+            break;
     }
     printf("%f\n", result);
     return 0;
