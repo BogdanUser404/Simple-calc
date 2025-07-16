@@ -25,7 +25,7 @@ int main(int argc   , char *argv[]){
         case '-':
             result = num1 - num2;
             break;
-        case '*':
+        case 'x':
             result = num1 * num2;
             break;
         case '/':
