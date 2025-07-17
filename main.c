@@ -6,15 +6,18 @@
 
 // Main function
 int main(int argc   , char *argv[]){
+    double num2 = 0;
     //System waring
-    if (argc != 4) {
+    if (argc < 3) {
         printf("Incorrect input. Please use the format: num1 operator num2\n");
         printf("PS: If you are entering num1 r/q/c/s, then just enter num1 /r/q/c/s 0 or any other number \n(I don't know how to fix this).\n");
         return 1;
     }
 //variabls
     double num1 = atoi(argv[1]);
-    double num2 = atoi(argv[3]);
+    if (argc > 3){
+        num2 = atoi(argv[3]);
+    }
     char op = argv[2][0];
     double result;
 //switch block 
@@ -42,12 +45,12 @@ int main(int argc   , char *argv[]){
             break;
         case 's':
             result = sin(num1);
+            break;
         case 'q':
             result = cbrt(num1);
-            break;
+             break;
         case 'r':
             result = sqrt(num1);
-            break;
     }
     printf("%f\n", result);
     return 0;
